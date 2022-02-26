@@ -1,11 +1,12 @@
-<?php
-session_start();
+
+<script>
+    session_start();
 if (!isset($_SESSION['log'])) {
-    header('location: index.php');
+    header('location: index.html');
     exit();
 }
 
-?>
+</script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,9 +61,9 @@ if (!isset($_SESSION['log'])) {
             <button type="button" id="logout" class="btn btn-primary" style="position:absolute; left: 80%;">DECONNEXION</button>
         </h1>
 
-        <h2>
-            <?php echo '<h2 class="text-center">BIENVENU <strong style="color:#86b7fe;"> ' . $_SESSION['pseudo'] . ' !!</strong> </h2>'; ?>
-        </h2>
+            <h2 class="text-center">
+                BIENVENU <strong style="color:#86b7fe;"> <script> <?php echo ' ' . $_SESSION['pseudo'] . ' ' ?> </script>  !!</strong>
+             </h2>
 
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#completeModal">
